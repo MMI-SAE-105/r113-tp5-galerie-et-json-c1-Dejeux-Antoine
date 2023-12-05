@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,19 @@
 <body x-data="{ imageAffiche:null, }">
     <h1>Galerie</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloribus perspiciatis odit reiciendis nostrum!
-        Provident natus consequuntur vitae rem illum quaerat ipsum totam, voluptates placeat. Eaque ipsa libero nihil quisquam?</p>
-    <div class="overlay" x-show="imageAffiche" @click="imageAffiche = null"
+        Provident natus consequuntur vitae rem illum quaerat ipsum totam, voluptates placeat. Eaque ipsa libero nihil
+        quisquam?</p>
+    <div class="overlay" x-show="imageAffiche" @click="imageAffiche = null" style="display: none;"
         @keyup.escape.window="imageAffiche = null">
         <figure><img :src="imageAffiche" alt="image du chiot"></figure>
     </div>
 
     <div class="petiteaffiche">
 
-    <img src="https://picsum.photos/id/236/40/60" alt="maison bord de mer"
-        @click="imageAffiche='https://picsum.photos/id/236/200/300'">
-    <img src="https://picsum.photos/id/237/40/60" alt="petit chiot"
-        @click="imageAffiche='https://picsum.photos/id/237/200/300'">
+        <img src="https://picsum.photos/id/236/40/60" alt="maison bord de mer"
+            @click="imageAffiche='https://picsum.photos/id/236/200/300'">
+        <img src="https://picsum.photos/id/237/40/60" alt="petit chiot"
+            @click="imageAffiche='https://picsum.photos/id/237/200/300'">
 
     </div>
 </body>
@@ -33,50 +35,51 @@
 
 
 <style>
-
-.overlay {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    cursor: pointer;
-    display: grid;
-    place-content: center; 
+    .overlay {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+        display: grid;
+        place-content: center;
     }
-.overlay::after {
-    content: "X";
-    color: white;   
-    background-color: black;    
-    font-family: sans-serif;    
-    text-align: center; 
-    line-height: 2rem;    
-    display: block; 
-    position: absolute; 
-    right: 1rem;    
-    width: 2rem;    
-    height: 2rem;   
-    border: solid white 2px;  
-    border-radius: 50%;  
-}
-.overlay>figure {
-    margin: 0;  
-    padding: 1rem;  
-    border: solid white 2px;  
-}
-    
-img {
-    max-width: 100%;    
-    height: auto;   
-}
 
-.petiteaffiche {
-    cursor: pointer;
-}
+    .overlay::after {
+        content: "X";
+        color: white;
+        background-color: black;
+        font-family: sans-serif;
+        text-align: center;
+        line-height: 2rem;
+        display: block;
+        position: absolute;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border: solid white 2px;
+        border-radius: 50%;
+    }
+
+    .overlay>figure {
+        margin: 0;
+        padding: 1rem;
+        border: solid white 2px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .petiteaffiche {
+        cursor: pointer;
+    }
 </style>
 
 
