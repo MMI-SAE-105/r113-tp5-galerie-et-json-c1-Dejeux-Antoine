@@ -7,14 +7,22 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-    <body x-data=" { testImage: 'https://picsum.photos/id/237/200/300', }">
-    
+<body x-data="{
+    imageaffichee:null,    
+}">
     <h1>Galerie</h1>
-    <p>lorem⇥</p>
-    <div class="overlay">
-        <figure><img :src="testImage" alt="image chiot"></figure>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloribus perspiciatis odit reiciendis nostrum!
+        Provident natus consequuntur vitae rem illum quaerat ipsum totam, voluptates placeat. Eaque ipsa libero nihil quisquam?</p>
+    <div class="overlay" x-show="imageaffichee" @click="imageaffichee = null"
+        @keyup.escape.window="imageaffichee = null">
+        <figure><img :src="imageaffichee" alt="image 237... un chiot"></figure>
     </div>
-    
+    <div class="petiteaffiche">
+    <img src="https://picsum.photos/id/236/40/60" alt="maison bord de mer"
+        @click="imageaffichee='https://picsum.photos/id/236/200/300'">
+    <img src="https://picsum.photos/id/237/40/60" alt="petit chiot"
+        @click="imageaffichee='https://picsum.photos/id/237/200/300'">
+        </div>
 </body>
 
 
@@ -65,6 +73,9 @@ img {
     height: auto;   
 }
 
+.petiteaffiche {
+    cursor: pointer;
+}
 </style>
 
 
