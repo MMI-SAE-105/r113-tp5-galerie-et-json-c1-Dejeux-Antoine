@@ -1,0 +1,17 @@
+[
+    {
+        "nom": "antoine",
+        "projet": "Alpine.js",
+        "url": "https://alpinejs.dev/"
+    },
+    {
+        "nom": "theo",
+        "projet": "Tailwind CSS",
+        "url": "https://tailwindcss.com/"
+    },
+    {
+        "nom": "remi",
+        "projet": "Laravel",
+        "url": "https://laravel.com/"
+    }
+]
